@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    /* DARK THEME */
+    background-color: #080808;
+    color: #fff;
+    border: 5px solid #262626
+
+    /* LIGHT THEME */
+    /* color:#080808;
+    background-color: #ffffff; */
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    /* height: auto ; when 3dimage is there  */
+    /* directly used */
+    /* background-image: url(images/bgimg1.jpg); */
+    background-size: cover;
+    background-position: center;
+    /* border: 4px solid rgb(238, 239, 229); */
+    /*  it is use for black overlay  */
+    background-image:linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.9)),url(images/bgimg1.jpg);
+}
+
+.container {
+    padding: 0px 10%;
+    /* border: 5px solid green; */
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 3px solid blue; */
+
+}
+
+.logo {
+    width: 160px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    /* list-style: none; */
+    /* transition:.5s ease all; */
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+/* -----------------------------added new---------------------- */
+
+nav ul li a:hover{
+    color: #ff8400;
+
+
+}
+
+nav ul li a:hover::after {
+    /* border: 4px solid salmon; */
+    width: 100%;
+
+}
+/*  font size */
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px; 
+     margin-top: 20px;
+    /* ----------------------------------for animation in name ----------------------added_start----------- */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+    
+}
+
+/* animation added   */
+.header-text h1 span {
+    color: #ff8400  ;
+     /* position: absolute;
+    background-image: linear-gradient(#f10303,#ff0000);
+    transform: translate(0%,0%);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: -100px 0;  */
+    /* animation-name: animate; */
+    /* animation: animate 5s linear infinite alternate; */
+}
+
+/* @keyframes animate{
+    100%{
+        background-position: 0 0;
+    }
+} */
+
+/* ---------------------------------for animation in name ----------------------added_end------------ */ */
+
+/* -----------------------about section------------------------- */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+    /* border: 3px solid blue; */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    /* border-radius: 15px; */
+
+    /* fixes by me, img is very shunk  */
+    /* height: 500px; */
+
+    /* border: 2px solid #fff; */
+}
+/* -----------------------------IMAGE-SHADOW-START--------------------------------- */
+
+.card {
+    /* width: 190px;
+    height: 254px; */
+    border-radius: 30px;
+    /* background: #212121; */
+    /* background: #262626; */
+    background: #080808;
+    /* box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60); */
+   }
+   
+   
+   
+/* .card {
+    --bg: #e8e8e8;
+    --contrast: #e2e0e0;
+    --grey: #93a1a1;
+    position: relative;
+    padding: 9px;
+    background-color: var(--bg);
+    border-radius: 35px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-conic-gradient(var(--bg) 0.0000001%, var(--grey) 0.000104%) 60% 60%/600% 600%;
+    filter: opacity(10%) contrast(105%);
+  } */
+  /* -------------------------------  IMAGE-SHADOW-END   --------------------------------- */
+.about-col-2 {
+    flex-basis: 60%;
+}
+.about-content{
+    margin:20px 0 ;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    
+}
+
+.tab-tittles {
+    /* margin */
+    display: flex;
+    margin: 20px 0 40px;
+    /* border: 3px solid blue; */
+
+}
+
+
+.tab-links {
+    margin-right: 50px;
+    /* margin-left:10px ;  for icon  shifting toward left*/
+    font-size: 1.2rem;           /* changing to rem frm 18px*/
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+   color: #f3b6ff; /* border: 3px solid blue; */
+   /* color: #FFB6C1; */
+ 
+    
+
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ff004f;
+    position: absolute;
+    /*  it will take it from parent  */
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    
+}
+
+.tab-links.active-link:after {
+    width: 50%;
+}
+/* -----------------------------added new---------------------- */
+.tab-links:hover{
+    color: #ff004f;
+    
+    
+}
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-links.active-link:hover::after {
+    width: 100%;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* -----------------------------------service------------------------------------------- */
+#service {
+    padding: 30px 0;
+    /* border: 2px solid #ff8400; */
+
+}
+
+.service-list {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    /* border: 4px solid #ff8400; */
+}
+
+.service-list div {
+    background: #262626;
+    padding: 40px;
+    font-weight: 300;
+    border-radius: 18px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.service-list div i {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service-list div a {
+    /* font-size: 50px    */
+    color: #4125cd;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.service-list div h2 {
+    /* border: 2px solid #b54769; */
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.service-list div:hover {
+
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        
+    /* background: #ff004f; */
+    color: black;
+    /* here we cahnge also an 360 rotate */
+    transform: translateY(10px);
+}
+
+/* ---------------------------portfolio------------------------------------ */
+#portfolio {
+    /* border: 3px solid #ffffff; */
+    padding: 50px 0;
+}
+
+.work-list {
+    /* border:3px solid #ffffff;     */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #e4dbe4;
+    /* padding: 20px; */
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    /* border:2px solid #b54769; */
+}
+
+/* --------------- here is some content coming  toward styling with hovering------------ */
+.work:hover img {
+    /* transform: translateX(-10px); */
+    /* background-color: #e4e2e2; */
+    /* color:#080808; */
+    /* padding: 10px; */
+    transform: scale(1.1);
+
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 40px;
+    /* opacity:.8!important; */
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    /* opacity: 1; */
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 50px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.container .btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 10px 20px;
+    background-color: #080808;
+    /* font-size: 18px; */
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+
+}
+
+.btn:hover {
+    background: #ff004f;
+    ;
+}
+
+/* --------------------------------contact-styling--------------------------------- */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    margin-left: 10px;
+
+}
+
+.contact-left p i {
+    font-size: 25px;
+    color: #ff004f;
+    margin-right: 15px;
+}
+
+.social-icon a {
+    margin: 30px;
+}
+
+.social-icon a {
+    /* margin: 10px 20px ; */
+    text-decoration: none;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    font-size: 30px;
+    transition: transform 0.5s;
+}
+
+.social-icon a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 15px;
+    border-radius: 14px;
+}
+
+/* .btn2 {
+
+} */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    /* margin-top: 20px; */
+}
+.copyright i{
+    color: #ff004f;
+}
+#hello{
+    margin-top: -40px;
+    color: #60f106;
+    display: block;
+}
+
+/* --------------------------------------css ResponsiVness ---------------------------------*/
+nav .fa-sharp{
+    display: none;
+}
+@media only screen and (max-width:600px) {
+    #header{
+        background-image: url(images/menimage.jpg);
+        /* tested */
+        /* background-image: url(images/3dmenu.png); */
+        background-size: cover;
+        background-position:center ;
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+        /* margin-top: 20px; */
+    }
+
+    nav .fa-sharp{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+
+        background: 00FFFFFF;
+        /* background: #ff004f; */
+        /* background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);   add new */
+        position: fixed;
+        top:0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding-top:50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-sharp{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1 ,.about-col-2{
+      flex-basis: 100%;
+    }
+    .about-col-1 {
+        /* top margin added by me to avoid overlapping
+        in small screen */
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+    
+    
+}
+
+/* nav ul .fa-sharp:hover{
+    left:0px;
+} */
+
+/*          Chameleon  Animal  */
+
+/* .chameleon {
+  font: bold 3em sans-serif;
+  color: rgb(255, 54, 54);
+  animation: myAnimation 10s ease 1s 1 forwards;
+  margin-top: 20%;
+  font-size: 30px;
+  
+}    
+@keyframes myAnimation {
+  50% {
+    color: rgb(210, 214, 210);
+  }
+  100% {
+    color: rgb(10, 10, 179);
+  }
+} */
+

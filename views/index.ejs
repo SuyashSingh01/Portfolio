@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website Portfolio</title>
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/fb5a23203e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/images/temparylogoss.png" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-sharp fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi,I'm<span> <%=name%></span><br>From India</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- about section ------------------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="card">
+                        <!-- <img src="./images/aboutimg.jpg" alt=""> -->
+                        <img src="./images/gifaboutme.gif" alt="">
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="about-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus libero
+                        voluptate non eius
+                        inventore, dolor rerum dolorum ipsum fugit. Sequi possimus fugiat autem laborum nisi cumque
+                        velit incidunt commodi est?
+                        Ullam exercitationem nulla vitae officia quibusdam natus modi neque assumenda commodi. Velit
+                        quaerat adipisci doloremque sint, deserunt obcaecati temporibus sequi. Neque, fuga quam
+                        reiciendis voluptates omnis illo sit? Eum, omnis?</p>
+                    <div class="tab-tittles">
+
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                    </div>
+                    <!-- ------------------------skills-section--------------------->
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/app Interface</li>
+                            <li><span>Web-Developer</span><br>Web app development</li>
+                            <li><span>App-Developer</span><br>Building Android/iOS Apps</li>
+                            <li><span>Problem -Solver</span><br></li>
+                        </ul>
+                    </div>
+                    <!-- ------------------------Education-section------------------->
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Current</span><br>Bachelor Degree in Computer Science Stream</li>
+                            <li><span>2020-21</span><br>Done My 12 with CBSE Board </li>
+                            <li><span>2018-19</span><br>Done My 10 with CBSE Board</li>
+                        </ul>
+                    </div>
+                    <!-- ------------------------Experiences-section------------  -->
+
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>May 2023 -june 2023</span><br> Done my Internship at Internpe In Web-Development
+                            </li>
+                            <li><span>UI/UX</span><br>Designing Web/app Interface</li>
+                            <li><span>Cross-paltform App Dev With Flutter </span><br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------Service--------------------------------- -->
+    <div id="service">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web-Developer</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi. Dolor molestiae hic
+                        a repellendus expedita pariatur alias, cum fuga doloremque, cupiditate saepe voluptas,
+                        labore repudiandae? Obcaecati iure cupiditate labore?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi. Dolor molestiae hic
+                        a repellendus expedita pariatur alias, cum fuga doloremque, cupiditate saepe voluptas,
+                        labore repudiandae? Obcaecati iure cupiditate labore?</p>
+                    <a href="#">learn more</a>
+
+
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                    <h2>App-Developer</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, eligendi. Dolor molestiae hic
+                        a repellendus expedita pariatur alias, cum fuga doloremque, cupiditate saepe voluptas,
+                        labore repudiandae? Obcaecati iure cupiditate labore?</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------portfolio-section---------------------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/bgimg6.jpg" alt="img">
+                    <div class="layer">
+                        <h3>Text converter</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea accusamus, voluptatem
+                            laboriosam veniam tempore debitis veritatis vel tempora aut eius ad, sint adipisci
+                            consectetur
+                            in. Reiciendis, modi! Esse, impedit.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bgimg3.jpg" alt="img">
+                    <div class="layer">
+                        <h3>Password Generator</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea accusamus, voluptatem
+                            laboriosam veniam tempore debitis veritatis vel tempora aut eius ad, sint adipisci
+                            consectetur
+                            in. Reiciendis, modi! Esse, impedit.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bgimg5.jpg" alt="img">
+                    <div class="layer">
+
+                        <h3>Calculator</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ea accusamus, voluptatem
+                            laboriosam veniam tempore debitis veritatis vel tempora aut eius ad, sint adipisci
+                            consectetur
+                            in. Reiciendis, modi! Esse, impedit.</p>
+                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> </button>
+        </div>
+    </div>
+    <!-- ------------------------------contact------------------------------------ -->
+    <div id="contact ">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact</h1>
+                    <p><i class="fa-regular fa-envelope"></i>Contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8349732646</p>
+                    <p><i class="fa-regular fa-address-card"></i>Reach Out to me</p>
+                    <div class="social-icon">
+                        <a href=""><i class="fa-brands fa-square-github"></i></a>
+                        <a href=""><i class="fa-brands fa-discord"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <!-- <a href=""><i class="fa-brands fa-facebook"></i></a> -->
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <!-- <i class="fa-sharp fa-solid fa-download fa-beat-fade"></i> -->
+                    <!-- <a href="images/bgimg2.jpg" download class="btn btn2">Download CV</a> -->
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" id="" rows="5" placeholder="Your Messsage"></textarea>
+                        <button type="submit" class="btn btn2">Submit Now</button>
+                    </form>
+                    <span id="hello"></span>
+
+                    <!-- <button type="reset">Message Successfully Sent</button> -->
+
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>@ Copyright Made With <i class="fa-solid fa-heart"></i> by Suyash.</p>
+        </div>
+    </div>
+    <script src="/javascript/script.js"></script>
+</body>
+
+</html>
